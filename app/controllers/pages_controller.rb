@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def home
+    GenerateRandomUserJob.perform_later
   end
 
   def contact
